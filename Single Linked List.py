@@ -4,10 +4,8 @@ def __init__(self, data):
     self.next = None  # Initialize
     # next as null
 
-
 # Linked List class
 class LinkedList:
-
     # Function to initialize the Linked
     # List object
     def __init__(self):
@@ -20,7 +18,6 @@ class LinkedList:
         else:
             self.head.next = self.head
             self.head = new_node
-
     def display(self):
         current = self.head
         while current is not None:
