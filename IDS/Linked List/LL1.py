@@ -20,14 +20,13 @@ class LinkedList:
             temp = temp.next
         temp.next = NewNode
 
-    def insertPostion(self, pos, data):
+    def insertPosition(self, pos, data):
         temp = self.head
         NewNode = Node(data)
         i = 1
         while temp.next is not None and i < pos - 1:
             i += 1
             temp = temp.next
-
         if i is not pos - 1:
             print("Given position not available")
         else:
@@ -52,22 +51,22 @@ class LinkedList:
         if temp is not None:
             delNext = temp.next
             while delNext.next is not None:
-                temp=temp.next
-                delNext=delNext.next
-            temp.next=delNext.next
+                temp = temp.next
+                delNext = delNext.next
+            temp.next = delNext.next
         else:
-            print("No element present in the begining")
+            print("No element present in the beginning")
 
     def deleteElement(self):
-        temp = self.head
         if temp is not None:
             delNext = temp.next
             while delNext.next is not None:
-                temp=temp.next
-                delNext=delNext.next
-            temp.next=delNext.next
+                temp = temp.next
+                delNext = delNext.next
+            temp.next = delNext.next
         else:
             print("No element present in the begining")
+
 
 l1 = LinkedList()
 
@@ -77,7 +76,7 @@ l1.insertBegin(20)
 l1.insertEnd(30)
 l1.insertEnd(40)
 l1.insertBegin(5)
-l1.insertPostion(3, 7)
+l1.insertPosition(3, 7)
 l1.display()
 l1.deleteBegin()
 l1.display()
